@@ -14,9 +14,9 @@ int main()
 {
 	int n;
 	map<string, int> my_map;
-	
+	cout << "Please Enter the Number of Cities about to be entered"<<endl;
 	cin >> n; cin.ignore();
-	cout << "enter the " << n << " cities"<<endl;
+	cout << "Enter the " << n << " cities and population alongside"<<endl;
 
 	for (int i = 0; i < n; i++) {
 		string city;
@@ -25,7 +25,7 @@ int main()
 		my_map.insert(pair<string, int>(city, population));
 	}
 	string search;
-	cout << "what do you wanna search"<<endl;
+	cout << "What do you wanna search"<<endl;
 	getline(cin, search);
 	map<string, int>::const_iterator it = my_map.lower_bound(search);
 	cout << (*it).second;
